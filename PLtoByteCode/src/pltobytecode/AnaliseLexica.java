@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author 916001
  */
-public class Lexer {
+public class AnaliseLexica {
 
     static char elemento = ' ';
     static char proximo = ' ';
