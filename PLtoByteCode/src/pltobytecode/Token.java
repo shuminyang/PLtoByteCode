@@ -11,10 +11,9 @@ package pltobytecode;
  */
 public class Token {
 
-    public final Type t;
+    public final Type type;
     public final String c;
-    public final String v;
-    int type;
+    public final String value;
 
     public static enum Type {
 
@@ -30,6 +29,7 @@ public class Token {
         CALL,
         PRINT,
         WHILE,
+        DO,
         IF,
         THEN,
         ELSE,
@@ -49,19 +49,20 @@ public class Token {
         HET,
         LET,
         DIFF,
+        PERIOD,
         EOF
     }
 
     public Token(Type t, String c) {
-        this.t = t;
+        this.type = t;
         this.c = c;
-        this.v = null;
+        this.value = null;
     }
 
     public Token(Type t, String c, String v) {
-        this.t = t;
+        this.type = t;
         this.c = c;
-        this.v = v;
+        this.value = v;
     }
 
 }
