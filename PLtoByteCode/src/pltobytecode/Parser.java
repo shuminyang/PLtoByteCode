@@ -7,7 +7,6 @@ package pltobytecode;
 
 import java.util.List;
 import java.util.ArrayList;
-import static pltobytecode.Token.Type.*;
 
 /**
  *
@@ -17,6 +16,7 @@ public class Parser {
 
     List<Token> tokens;
     Token lookahead;
+    TabelaSimbolos tabRaiz;
 
     public Parser(List<Token> tokens) {
         this.tokens = tokens;
@@ -40,7 +40,7 @@ public class Parser {
         node.children.add(programDecl(node));
         node.children.add(mainBlock(node));
         node.children.add(_period(node));
-
+        
         return node;
     }
 

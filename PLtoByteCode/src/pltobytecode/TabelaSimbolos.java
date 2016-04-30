@@ -16,6 +16,14 @@ public class TabelaSimbolos {
     TabelaSimbolos pai;
     HashMap<String, Token.Type> tabela = new HashMap<>();
     
+    public TabelaSimbolos(){
+        
+    }
+    
+    public TabelaSimbolos(TabelaSimbolos pai) {
+        this.pai = pai;
+    }
+    
     public Object lookup(String varNome) throws Exception {
         if (tabela.get(varNome) != null) {
             return tabela.get(varNome);
@@ -26,7 +34,8 @@ public class TabelaSimbolos {
         }
     }
     
-    public void addVariavelNova(String id, Token.Type tipo) {
+    public void addId(String id, Token.Type tipo) {
         tabela.put(id, tipo);
-    }
+    }   
+    
 }

@@ -11,7 +11,7 @@ package pltobytecode;
  */
 public class AnaliseSemantica {
     
-    TabelaSimbolos tsPai = new TabelaSimbolos();
+    TabelaSimbolos tabelaSimbolo = new TabelaSimbolos();
 
     public void postOrder(Parser.Node no) {
         
@@ -23,7 +23,7 @@ public class AnaliseSemantica {
         switch (no.id) {
             case "BEGIN":
             case "var":
-                tsPai.addVariavelNova(null, Token.Type.ID);
+                tabelaSimbolo.addId(null, Token.Type.ID);
                 
                 
         }
